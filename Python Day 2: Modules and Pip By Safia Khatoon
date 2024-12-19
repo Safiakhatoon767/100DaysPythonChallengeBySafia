@@ -1,0 +1,36 @@
+What is Modules ?
+
+Modules are used to borrow someone else’s code .
+
+There are 2 Types of module :
+
+Built-in Modules: Built-in modules are modules that do not need to be installed externally; they are already included with Python.
+
+example : math, random, os, etc.
+
+External Modules: External modules are those modules that you install from the internet. For example, in your home, the kitchen is like a built-in module, and the kitchen items like sugar, milk, and rice are like external modules.
+
+Example: pandas, numpy, flask, django
+
+What is pip ?
+
+It installs modules from the internet.
+
+Practical:
+
+write pip in your command line
+
+pip install pandas
+
+How to Uninstall Modules:
+
+pip uninstall pandas
+
+What is the difference between command line tools and Replit?
+
+In command line tools, errors can occur, but in Replit, it's more convenient to use. If you install a module from the internet, you simply write import <module_name>, and it's installed and imported without needing to write pip install <module_name>.
+
+what is import ?
+
+In Python, import is used to bring in code from other files or libraries so you can use it in your program.
+
