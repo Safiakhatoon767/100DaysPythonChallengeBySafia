@@ -1,0 +1,267 @@
+Learn Python Basics: Writing Your First Program, Understanding Variables, Comments, and More!
+
+Welcome to of our Python journey! Today, we’ll learn about First Program, Comments, Escape Sequences, Variables, Data Types, and Calculator in Python. Let’s dive in!
+
+First Program :
+
+print("Hello_World")
+This prints the text "Hello_World" on the screen.
+Example:
+
+print("Hello_World")  # Output: Hello_World
+
+print("Safia Khatoon")
+This prints the text "Safia Khatoon" on the screen.
+Example:
+
+print("Safia Khatoon")  # Output: Safia Khatoon
+
+print(23)
+This prints the number 23 on the screen.
+Example:
+
+print(23)  # Output: 23
+
+print(100*20)
+This prints the result of multiplying 100 and 20, which is 2000.
+Example:
+
+print(100 * 20)  # Output: 2000
+
+What is print?
+
+print is a function in Python that displays output (like text, numbers, or results of calculations) on the screen.
+
+What is a function?
+
+A function is a reusable block of code that performs a specific task. In this case, the print function is used to show something on the screen.
+
+Comments in Python
+
+Comments are notes in your code that explain what it does. Python ignores these comments when running the program. They help you and others understand the code better.
+
+Single-line Comment
+A single-line comment starts with a #. Everything after # is ignored by Python.
+Example:
+
+# This is a comment
+print("Hello, Python!")  # This will print a message
+
+Multi-line Comment
+You can also write comments on multiple lines using ''' or """.
+Example:
+
+'''
+This is a 
+multi-line comment
+'''
+print("Multi-line comments are useful!")
+
+2. Escape Sequences
+
+Escape sequences are special characters used to represent things that are hard to type directly, like new lines or tabs. They start with a backslash (\).
+
+\n – New line
+Moves to a new line.
+Example:
+
+print("Hello\nWorld!")
+
+\t – Tab
+Adds a tab space.
+Example:
+
+print("Hello\tWorld!")
+
+\\ – Backslash
+Prints a single backslash.
+Example:
+
+print("This is a backslash: \\")
+
+\' – Single quote
+Prints a single quote.
+Example:
+
+print("It's a beautiful day!")
+
+\" – Double quote
+Prints a double quote.
+Example:
+
+print("She said, \"Hello!\"")
+
+3. Characters in Python
+
+In Python, characters are simply strings of length 1. For example, 'a' or 'b' are characters. Strings can contain letters, numbers, or special characters.
+
+Example:
+
+char = 'A'
+print(char)  # Output: A
+
+Variables and Data Types
+
+What are Variables?
+A variable is like a box where you store information (data) to use later.
+Example:
+
+x = 5  # 'x' is a box holding the value 5
+
+Data Types in Python
+
+Data types tell Python what kind of information is stored in a variable.
+
+int (Integer)
+Numbers without a decimal.
+Example:
+
+age = 25
+
+float
+Numbers with a decimal.
+Example:
+
+price = 19.99
+
+str (String)
+Text or characters inside quotes.
+Example:
+
+name = "Safia"
+
+bool (Boolean)
+True or False values.
+Example:
+
+is_active = True
+
+list
+A collection of items in square brackets.
+Example:
+
+fruits = ["apple", "banana", "cherry"]
+
+tuple
+Like a list, but you can't change the items (immutable).
+Example:
+
+coordinates = (10, 20)
+
+dict (Dictionary)
+Stores data in key-value pairs.
+Example:
+
+student = {"name": "Safia", "age": 25}
+
+None
+Represents "nothing" or "empty."
+Example:
+
+result = None
+
+Key Points
+
+Use = to assign a value to a variable.
+
+Python automatically decides the data type based on the value.
+Example:
+
+x = 10       # int
+y = "hello"  # str
+
+Operators in Python
+
+Operators are symbols used to perform operations on values or variables. Here's a simple breakdown:
+
+1. Arithmetic Operators
+
+Used for basic math.
+
+Operator
+
+Meaning
+
+Example
+
+Result
+
++
+
+Add
+
+5 + 3
+
+8
+
+-
+
+Subtract
+
+5 - 3
+
+2
+
+*
+
+Multiply
+
+5 * 3
+
+15
+
+/
+
+Divide
+
+5 / 2
+
+2.5
+
+//
+
+Floor Division
+
+5 // 2
+
+2
+
+%
+
+Modulus (Remainder)
+
+5 % 2
+
+1
+
+**
+
+Exponentiation
+
+2 ** 3
+
+8
+
+Create a Calculator :
+
+print("Create A Calculator Using Python")
+
+# Input two numbers from the user
+a = float(input("Enter Your First Number: "))
+b = float(input("Enter Your Secound Number: "))
+
+# Perform calculations
+add = a + b
+sub = a - b
+mul = a * b
+div = a / b 
+
+# Display results
+print("Addition Of Two Number Is: ", add)
+print("Subtraction Of Two Number Is: ", sub)
+print("Multiplication Of Two Number Is: ", mul)
+print("Division Of Two Number Is: ", div)
+
+Stay tuned for more fun Python learning! Happy coding!
+
+Written by Safia Khatoon
