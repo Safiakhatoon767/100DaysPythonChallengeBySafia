@@ -1,0 +1,263 @@
+What Are Strings?
+In Python, anything you put between single (' ') or double quotes (" ") is called a string. A string is a collection of characters (text data) arranged in a specific order. Strings are often used to work with textual or Unicode data.
+
+Example:
+name = "Safia"  
+print("Hello, " + name)
+Output:
+Hello, Safia
+You can use either single or double quotes to define strings, and both will work the same.
+Using Quotes Inside Strings
+If you want to include quotation marks inside a string, you can use single quotes for the string and double quotes for the quote, or vice versa.
+
+Example:
+print('He said, "I want to eat an apple".')
+Output:
+He said, "I want to eat an apple".
+Multiline Strings
+For strings that span multiple lines, use triple quotes (''' or """).
+
+Example:
+a = """Lorem ipsum dolor sit amet,  
+consectetur adipiscing elit,  
+sed do eiusmod tempor incididunt  
+ut labore et dolore magna aliqua."""  
+print(a)
+Output:
+Lorem ipsum dolor sit amet,  
+consectetur adipiscing elit,  
+sed do eiusmod tempor incididunt  
+ut labore et dolore magna aliqua.
+Accessing Characters in a String
+Strings in Python work like arrays, where each character has an index starting from 0. You can use square brackets [ ] to access specific characters.
+
+Example:
+name = "Safia"  
+print(name[0])  # Output: S  
+print(name[1])  # Output: a
+Looping Through a String
+You can use a for loop to go through each character in a string one by one.
+
+Example:
+name = "Safia"  
+for character in name:  
+    print(character)
+Output:
+
+S 
+a  
+f 
+i  
+a
+In summary: Strings are simple and flexible to use in Python. You can use them for handling text, quotes, multiline text, and more!
+
+Practical:
+name = "Safia"
+friend = "Sadaf"
+anotherFriend = 'Amir'
+apple = '''He said, 
+Hi Harry
+hey I am good
+"I want to eat an apple'''
+
+print("Hello, " + name)
+# print(apple) 
+print(name[0])
+print(name[1])
+print(name[2])
+print(name[3])
+print(name[4])
+# print(name[5]) # Throws an error
+print("Lets use a for loop\n")
+for character in apple:
+    print(character)
+String Slicing & Operations on Strings
+The len() function is used to find the length of a string (number of characters).
+
+Strings as Arrays
+
+Strings in Python are sequences of characters, which means they can be treated like arrays. You can access individual characters using their index.
+
+Slicing: Using : specifies a range of characters.
+
+Slicing a String
+
+Slicing lets you extract parts of a string by specifying the start and end indices.
+
+Looping Through a String
+
+Since strings are arrays of characters, they can be looped through using a for loop.
+
+# Length of a String
+fruit = "Apple"  
+len1 = len(fruit)
+print("Apple is a", len1, "letter word.")
+
+# Strings as Arrays
+pie = "GuavaPie"  
+print(pie[:5])    # Output: Guava
+print(pie[6])     # Output: i
+
+# Slicing Examples
+print(pie[:5])      # Slicing from Start → Output: Guava
+print(pie[5:])      # Slicing till End → Output: Pie
+print(pie[2:6])     # Slicing in Between → Output: avap
+print(pie[-8:])     # Slicing using Negative Index → Output: GuavaPie
+
+# Looping Through a String
+alphabets = "ABCDE"
+for i in alphabets:
+    print(i)
+Output:
+Apple is a 5 letter word.
+Guava
+i
+Guava
+Pie
+avap
+GuavaPie
+A
+B
+C
+D
+E
+Quick Quiz : (practice)
+
+fruit = "Apple"
+appleLen = len(fruit)
+print(appleLen)
+print(fruit[0:4]) # including 0 but not 4
+print(fruit[1:4]) # including 1 but not 4
+print(fruit[:5])
+print(fruit[0:-3])
+print(fruit[:len(fruit)-3])
+print(fruit[-1:len(fruit) - 3])
+print(fruit[-3:-1])
+
+# Quick Quiz:
+nm = "Safia"
+print(nm[-4:-2])
+# @SafiaKhatoon
+Summary of Operations:
+len() → Find the length of a string.
+
+Slicing: Extract parts of a string using [start:end].
+
+Negative Indexing: Use negative numbers to access characters from the end of the string.
+
+Looping: Iterate through each character in the string using a for loop.
+
+Python String Methods
+upper()
+Converts all characters to uppercase.
+
+ text = "hello"
+ print(text.upper())  # Output: HELLO
+lower()
+Converts all characters to lowercase.
+
+ text = "HELLO"
+ print(text.lower())  # Output: hello
+
+strip()
+Removes spaces from the beginning and end.
+
+ text = "  Hello World  "
+ print(text.strip())  # Output: Hello World
+rstrip()
+Removes specific trailing characters.
+
+ text = "Hello??"
+ print(text.rstrip("?"))  # Output: Hello
+replace()
+Replaces parts of the string with something else.
+
+ text = "I love cats"
+ print(text.replace("cats", "dogs"))  # Output: I love dogs
+split()
+Splits the string into a list by a separator.
+
+ text = "apple,banana,grape"
+ print(text.split(","))  # Output: ['apple', 'banana', 'grape']
+capitalize()
+Capitalizes the first character.
+
+
+ text = "python is fun"
+ print(text.capitalize())  # Output: Python is fun
+center()
+Aligns the string to the center.
+
+ text = "Hello"
+ print(text.center(10, "*"))  # Output: ***Hello***
+count()
+Counts how many times a value appears.
+
+ text = "banana"
+ print(text.count("a"))  # Output: 3
+endswith()
+Checks if the string ends with a specific value.
+
+text = "welcome.txt"
+print(text.endswith(".txt"))  # Output: True
+find()
+Finds the index of the first occurrence of a value.
+
+
+text = "Hello World"
+print(text.find("World"))  # Output: 6
+isalnum()
+Returns True if the string contains only letters and numbers.
+
+
+text = "Python123"
+print(text.isalnum())  # Output: True
+isalpha()
+Returns True if the string contains only letters.
+
+
+text = "Python"
+print(text.isalpha())  # Output: True
+islower()
+Returns True if all characters are lowercase.
+
+
+
+text = "python"
+print(text.islower())  # Output: True
+isspace()
+Returns True if the string contains only spaces.
+
+
+text = "   "
+print(text.isspace())  # Output: True
+istitle()
+Returns True if each word starts with an uppercase letter.
+
+
+text = "Hello World"
+print(text.istitle())  # Output: True
+isupper()
+Returns True if all characters are uppercase.
+
+
+
+text = "HELLO"
+print(text.isupper())  # Output: True
+startswith()
+Checks if the string starts with a specific value.
+
+text = "Hello Python"
+print(text.startswith("Hello"))  # Output: True
+swapcase()
+Swaps uppercase to lowercase and vice versa.
+
+text = "Hello World"
+print(text.swapcase())  # Output: hELLO wORLD
+title()
+Converts the first character of each word to uppercase.
+
+
+text = "hello python"
+print(text.title())  # Output: Hello Python
+
