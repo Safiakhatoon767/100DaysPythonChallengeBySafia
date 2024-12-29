@@ -1,0 +1,122 @@
+Break and continue in Python
+
+1. break
+
+Definition: Stops the loop completely. even if there are more iterations left.
+
+Example:
+
+for i in range(5):
+    if i == 3:
+        break
+    print(i)  # Output: 0, 1, 2
+
+2. continue
+
+Definition: Skips the current iteration and moves to the next one.
+
+Example:
+
+for i in range(5):
+    if i == 3:
+        continue
+    print(i)  # Output: 0, 1, 2, 4
+
+Do-While Loop in Python (Easy Explanation)
+
+A do-while loop runs the code at least once before checking the condition.
+
+Python doesn’t have a direct do-while loop, but we can emulate it using a while True loop and break.
+
+How to Write a Do-While Loop in Python?
+
+Use while True to create an infinite loop.
+
+Check the condition inside the loop.
+
+Use break to stop the loop when the condition is false.
+
+Example:
+
+while True:
+    number = int(input("Enter a positive number: "))
+    print(number)  # Prints the number
+    if number <= 0:  # Stop the loop if the number is not positive
+        break
+
+Output:
+
+Enter a positive number: 5
+5
+Enter a positive number: 10
+10
+Enter a positive number: -1
+-1
+
+Explanation:
+
+The loop always runs once because it starts with while True.
+
+The condition (number <= 0) is checked inside the loop.
+
+If the condition is true, break stops the loop.
+
+Python Functions :
+
+A function is a block of code that performs a specific task.
+
+It helps make the program organized and reusable.
+
+Types of Functions
+
+Built-in Functions: Predefined in Python, e.g., print(), len(), max().
+
+User-defined Functions: Created by us to perform specific tasks.
+
+How to Create a Function?
+
+Use the def keyword to define a function.
+
+Give the function a name.
+
+Add parameters (optional) in parentheses ().
+
+Write the code inside the function (indented).
+
+Syntax:
+
+def function_name(parameters):
+    # Code inside the function
+    pass
+
+Example:
+
+# Define a function
+def greet(name):
+    print("Hello,", name)
+
+# Call the function
+greet("Alice")
+
+Output:
+
+Hello, Alice
+
+How to Call a Function?
+
+Use the function name followed by () and provide arguments if needed.
+
+Summary: Functions make your code cleaner, reusable, and easier to manage!
+
+simple function to add two numbers :
+
+def add_two_numbers(a, b):
+    return a + b  # Returns the sum of a and b
+
+# Call the function
+result = add_two_numbers(10, 20)
+print("The sum is:", result)
+
+def name (name1, name2):
+ print("Namaste,", name1,name2)
+name("safia", "najiya")
