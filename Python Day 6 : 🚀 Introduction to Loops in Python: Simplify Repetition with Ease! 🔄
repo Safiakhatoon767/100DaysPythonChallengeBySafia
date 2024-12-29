@@ -1,0 +1,269 @@
+Introduction to Loops in Python
+
+Loops allow us to execute a block of code multiple times. Python primarily supports two types of loops:
+
+for loop
+
+while loop
+
+The for Loop
+
+The for loop is used to iterate over sequences like strings, lists, tuples, sets, or dictionaries.
+
+Example: Iterating Over a String
+
+city = 'Mumbai'
+for char in city:
+    print(char, end="-")
+
+Output:
+
+M-u-m-b-a-i-
+
+Example: Iterating Over a List
+
+fruits = ["Apple", "Banana", "Cherry", "Mango"]
+for fruit in fruits:
+    print(fruit)
+
+Output:
+
+Apple  
+Banana  
+Cherry  
+Mango
+
+The range() Function
+
+The range() function helps us loop over a sequence of numbers.
+
+Default Range Example
+
+for num in range(6):
+    print(num)
+
+Output:
+
+0  
+1  
+2  
+3  
+4  
+5
+
+By default, the loop starts at 0 and increments by 1.
+
+Range With Start and End
+
+for num in range(3, 8):
+    print(num)
+
+Output:
+
+3  
+4  
+5  
+6  
+7
+
+The loop starts at 3 and stops before 8.
+
+Quick Quiz: Third Parameter in range()
+
+The third parameter in the range() function is the step value (increment or decrement).
+Syntax: range(start, stop, step)
+
+Example: Using Step in range()
+
+for num in range(1, 10, 3):  # Increment by 3
+    print(num)
+
+Output:
+
+1  
+4  
+7
+
+Example: Using Negative Step
+
+for num in range(10, 2, -2):  # Decrement by 2
+    print(num)
+
+Output:
+
+10  
+8  
+6  
+4
+
+Conclusion
+
+Use for loops to iterate over any sequence like strings, lists, or dictionaries.
+
+Use range() to loop a specific number of times with optional start, stop, and step values.
+
+Practice using the third parameter in range() for custom increments or decrements! 🚀
+
+Practical:
+
+name = "safia"
+for cute in name: # for loop
+   print(cute)
+
+fruits = ["apple", "kiwi","grapes"]
+for fruit in fruits:
+  print(fruit)   #itirate list
+
+for num in range(1,1001): # range
+  print(num)
+
+for num in range(1,10,2):
+   print(num) #increment
+
+for num in range(10,2,-2):
+   print(num) #decrement
+
+Check Even or Odd Numbers :
+
+# Loop through numbers 1 to 5
+for number in range (1,20):  # Numbers from 1 to 19
+   if number % 2 == 0: # Check if the number is divisible by 2
+      print(number, "Is Even")  # Print this if the number is even
+   else:
+      print(number,"Is Odd")  # Print this if the number is odd
+
+While Loops in Python :
+
+Python while Loop
+
+The while loop is used to repeat a block of code as long as a condition is True. When the condition becomes False, the loop stops.
+
+Simple Example: Count Down Numbers
+
+number = 3  # Start from 3
+while number > 0:  # Run the loop while the number is greater than 0
+    print(number)  # Print the current number
+    number = number - 1  # Decrease the number by 1
+
+Output:
+
+3
+2
+1
+
+Explanation:
+
+The loop starts with number = 3.
+
+The condition number > 0 is checked.
+
+Inside the loop:
+
+It prints the current value of number.
+
+Then decreases number by 1 (number = number - 1).
+
+The loop stops when number becomes 0.
+
+Else with while Loop
+
+You can add an else block to the while loop. The else block will run when the while loop condition becomes False.
+
+Simple Example with else
+
+number = 3  # Start from 3
+while number > 0:  # Run the loop while the number is greater than 0
+    print(number)  # Print the current number
+    number = number - 1  # Decrease the number by 1
+else:
+    print("The loop has ended!")  # This runs when the condition becomes False
+
+Output:
+
+3
+2
+1
+The loop has ended!
+
+Explanation:
+
+The else block runs after the while loop ends.
+
+When number becomes 0, the condition number > 0 is False.
+
+At this point, the program moves to the else block and prints "The loop has ended!".
+
+Why Use the else Block?
+
+The else block can be used for:
+
+Printing a final message after the loop ends.
+
+Adding extra logic to handle the loop termination.
+
+Interesting Python Programs Using Loops and Conditions :
+
+Guess the Secret Number Game :
+
+secret_number = 9
+attempts = 3
+
+print("Guess Karo Bhai Secret Number between 1 and 10!")
+
+while attempts > 0:
+    guess = int(input("Enter your guess: "))
+    if guess == secret_number:
+        print("🎉 Correct! You guessed it!")
+        break
+    elif guess > secret_number:
+        print("Too high! Try again.")
+    else:
+        print("Too low! Try again.")
+    attempts -= 1
+
+if attempts == 0:
+    print("😢 Sorry, you've run out of attempts. The secret number was", secret_number)
+
+Multiplication Table :
+
+num = int(input("Enter a number: "))
+print (f"Multipilication Table of {num}")
+for mul in range (1,11):
+ print(f"{num} x {mul} = {num * mul}")
+
+what is f ?
+
+To use an f-string, write the string with an f prefix and include variables or expressions inside curly braces {}. Python will replace the curly braces with the actual value.
+
+name = "Safia"
+age = 24
+
+# Using f-string
+print(f"My name is {name} and I am {age} years old.")
+
+Password Checker :
+
+correct_password = "safia123"
+attempts = 3
+
+while attempts > 0:
+    password = input("Enter the password: ")
+    if password == correct_password:
+        print("✅ Access Granted!")
+        break
+    else:
+        print("❌ Incorrect password. Try again.")
+    attempts -= 1
+
+if attempts == 0:
+    print("⛔ Too many attempts. Access Denied.")
+
+Reverse a Word :
+
+word = input("Enter a word to reverse: ")
+reversed_word = ""
+
+for char in word:
+      reversed_word = char + reversed_word
+
+print("Reversed word:", reversed_word)
