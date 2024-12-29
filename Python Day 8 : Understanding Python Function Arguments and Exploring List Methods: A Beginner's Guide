@@ -1,0 +1,446 @@
+Function Arguments:
+
+Functions in Python accept arguments to work with. There are four main types:
+
+Default Arguments:
+
+You can set a default value for arguments.
+
+If you don't provide a value during the function call, the default is used.
+
+def greet(name, role="student"):
+    print(f"Hello {name}, you are a {role}")
+greet("Safia")  # Output: Hello Safia, you are a student
+greet("Aman", "teacher")  # Output: Hello Aman, you are a teacher
+
+Keyword Arguments:
+
+Use key=value to assign arguments directly by their name.
+
+The order doesn’t matter.
+
+def introduce(name, age, city):
+    print(f"{name} is {age} years old from {city}.")
+introduce(age=24, city="Hyderabad", name="Safia")  
+# Output: Safia is 24 years old from Hyderabad.
+
+Required Arguments:
+
+Arguments must be passed in the correct order and quantity.
+
+def calculate_sum(a, b, c):
+    print(a + b + c)
+calculate_sum(10, 20, 30)  # Output: 60  
+# calculate_sum(10, 20)  # Error: Missing 1 required argument.
+
+Variable-Length Arguments:
+
+For passing any number of arguments, use * or **.
+
+* for tuple-based arguments:
+
+def add_numbers(*nums):
+    print(sum(nums))
+add_numbers(10, 20, 30, 40)  # Output: 100
+
+** for dictionary-based arguments:
+
+def show_details(**info):
+    print(info)
+show_details(name="Safia", age=24, city="Hyderabad")  
+# Output: {'name': 'Safia', 'age': 24, 'city': 'Hyderabad'}
+
+return Statement:
+
+The return statement sends back a result from the function.
+
+Without return, functions only perform tasks; with return, they give a value back.
+
+def add(a, b):
+    return a + b
+result = add(10, 20)  
+print(result)  # Output: 30
+
+Summary:
+
+Default Arguments: Use default values if no value is provided.
+
+Keyword Arguments: Pass arguments in any order using key=value.
+
+Required Arguments: Pass all arguments in the correct order and number.
+
+Variable-Length Arguments: Use * for tuples, ** for dictionaries to handle extra arguments.
+
+return Statement: Sends a result back to the calling code.
+
+Practice:
+
+def greet (name, role):
+    print(f"Hello {name}, You are a {role}")
+greet("safia","teacher")
+
+def introduce (name,age,city):
+    print(f"{name} is {age} years old and from {city}.")
+introduce(age=24, name="safia", city="Hyderabad")
+
+
+def calculate_sum(a, b, c):
+    print(a + b + c)
+calculate_sum(12,15,10)
+
+def add_numbers (*nums):
+    print(sum(nums))
+add_numbers(10,20,30,40,50)
+
+def show_detail(**info):
+    print(info)
+show_detail(name = "safia", age = 24, city = "Hyderabad")
+
+def add(a, b):
+    return a + b
+result = add(60,10)
+print(result)
+
+Introduction to Lists in Python :
+
+Python Lists: Simplified Explanation and Examples
+
+Definition:
+
+A list is an ordered collection of items.
+
+You can store multiple items in a single variable.
+
+Lists are written in square brackets [] and items are separated by commas.
+
+Lists are mutable, meaning their content can be changed.
+
+Key Concepts
+
+Creating a List
+Example:
+
+numbers = [1, 2, 3, 4]
+colors = ["Red", "Green", "Blue"]
+print(numbers)
+print(colors)
+
+Output:
+
+[1, 2, 3, 4]  
+['Red', 'Green', 'Blue']
+
+List Indexing
+
+Each item in a list has an index.
+
+Positive indexing starts from 0.
+
+Negative indexing starts from -1 (from the end).
+Example:
+
+colors = ["Red", "Green", "Blue"]
+print(colors[0])  # Positive Index
+print(colors[-1]) # Negative Index
+
+Output:
+
+Red  
+Blue
+
+Check if Item Exists
+Use in keyword to check for an item.
+Example:
+
+colors = ["Red", "Green", "Blue"]
+if "Red" in colors:
+    print("Red is present.")
+
+Output:
+
+Red is present.
+
+Slicing a List
+
+Use [start:end:step] to access a portion of the list.
+
+Start: Index to begin.
+
+End: Index to stop (not included).
+
+Step: Jump index (default is 1).
+
+Example:
+
+animals = ["cat", "dog", "bat", "mouse", "pig"]
+print(animals[1:4])  # From index 1 to 3
+print(animals[::2])  # Every 2nd item
+
+Output:
+
+['dog', 'bat', 'mouse']  
+['cat', 'bat', 'pig']
+
+List Comprehension
+
+Short way to create a new list from an existing one.
+Syntax:
+
+new_list = [expression for item in iterable if condition]
+
+Example:
+
+names = ["Milo", "Sarah", "Bruno"]
+names_with_o = [name for name in names if "o" in name]
+print(names_with_o)
+
+Output:
+
+['Milo', 'Bruno']
+
+Summary
+
+Lists store multiple items and are changeable.
+
+Indexing helps access items: Positive [0, 1, 2...], Negative [-1, -2, -3...].
+
+Use in to check if an item exists.
+
+Slicing allows accessing parts of the list using [start:end:step].
+
+List Comprehension makes creating filtered lists easy and efficient.
+
+Easiest Example
+
+fruits = ["apple", "banana", "cherry", "date"]
+print(fruits[1])         # Accessing with index
+print(fruits[-1])        # Accessing last item
+print(fruits[1:3])       # Slicing (index 1 to 2)
+print([f for f in fruits if "a" in f])  # List comprehension
+
+Output:
+
+banana  
+date  
+['banana', 'cherry']  
+['apple', 'banana', 'date']
+
+Practice:
+
+numbers = [1,2,3,5,8,0] #list
+fruits = ["apple","banana","cherry","coconut","grapes"] #list
+print(numbers,fruits)
+
+print(numbers[3:5]) #indexing
+print(numbers[4:-1]) #negative indexing
+print(numbers[-4]) #negative indexing
+
+if "black" in fruits:
+    print("yes bhai")  # check if item existD
+else:
+    print("nahi hai bhai")
+
+print(fruits[1:4])  #start to end
+print(fruits[::2]) #step
+
+names = ["safia","sadaf","puja","najiya","amir","dev"] # list comprehension
+names_with_e = [n for n in names if "e" in n]
+print(names_with_e)
+
+Python List Methods
+
+1. list.sort()
+
+What it does: Sorts the list in ascending order.
+
+Default: Ascending, but can sort in descending with reverse=True.
+
+Example 1 (Ascending):
+
+numbers = [5, 3, 8, 1]
+numbers.sort()
+print(numbers)  # Output: [1, 3, 5, 8]
+
+Example 2 (Descending):
+
+numbers = [5, 3, 8, 1]
+numbers.sort(reverse=True)
+print(numbers)  # Output: [8, 5, 3, 1]
+
+2. list.reverse()
+
+What it does: Reverses the list (not sorting).
+
+Example:
+
+numbers = [5, 3, 8, 1]
+numbers.reverse()
+print(numbers)  # Output: [1, 8, 3, 5]
+
+3. list.index(item)
+
+What it does: Returns the index of the first occurrence of an item in the list.
+
+Example:
+
+colors = ["red", "green", "blue", "green"]
+print(colors.index("green"))  # Output: 1
+
+4. list.count(item)
+
+What it does: Counts how many times an item appears in the list.
+
+Example:
+
+colors = ["red", "green", "blue", "green"]
+print(colors.count("green"))  # Output: 2
+
+5. list.copy()
+
+What it does: Creates a copy of the list.
+
+Example:
+
+colors = ["red", "green", "blue"]
+new_colors = colors.copy()
+print(new_colors)  # Output: ['red', 'green', 'blue']
+
+6. list.append(item)
+
+What it does: Adds an item at the end of the list.
+
+Example:
+
+colors = ["red", "green"]
+colors.append("blue")
+print(colors)  # Output: ['red', 'green', 'blue']
+
+7. list.insert(index, item)
+
+What it does: Adds an item at a specific position.
+
+Example:
+
+colors = ["red", "blue"]
+colors.insert(1, "green")  # Insert at index 1
+print(colors)  # Output: ['red', 'green', 'blue']
+
+8. list.extend(other_list)
+
+What it does: Adds all items of another list to the current list.
+
+Example:
+
+colors = ["red", "green"]
+rainbow = ["blue", "yellow"]
+colors.extend(rainbow)
+print(colors)  # Output: ['red', 'green', 'blue', 'yellow']
+
+9. Concatenating Two Lists
+
+What it does: Joins two lists with the + operator.
+
+Example:
+
+colors1 = ["red", "green"]
+colors2 = ["blue", "yellow"]
+print(colors1 + colors2)  # Output: ['red', 'green', 'blue', 'yellow']
+
+Summary of Methods:
+
+Method
+
+Use
+
+Example Output
+
+sort()
+
+Sort list in ascending order
+
+[1, 2, 3]
+
+sort(reverse)
+
+Sort list in descending order
+
+[3, 2, 1]
+
+reverse()
+
+Reverse the list
+
+[3, 2, 1] → [1, 2, 3]
+
+index(item)
+
+First index of the item
+
+1 for "green" in ["red", "green"]
+
+count(item)
+
+Count occurrences of an item
+
+2 for "green" in ["green", "green"]
+
+copy()
+
+Make a copy of the list
+
+['red', 'green']
+
+append(item)
+
+Add item at the end
+
+['red', 'blue'] → ['red', 'blue', 'green']
+
+insert(index)
+
+Insert item at specific position
+
+['red', 'green', 'blue']
+
+extend(list)
+
+Add another list's items
+
+['red', 'green', 'blue']
+
+Practice:
+
+numbers = [45,56,78,90,356,70,13,3648]
+print(numbers)
+numbers.sort()
+print(numbers) #asscending_order
+
+numbers.sort(reverse=True) #desending_order
+print(numbers)
+
+numbers.reverse() #not shorting only reverse
+print(numbers)
+
+fruits = ["apple","banana","grapes","guava"] #return the index of the first occurance of an item in the list
+print(fruits.index("guava"))
+
+print(fruits.count("banana")) #count the banana how many times it written
+
+new_fruits = fruits.copy()  #create a copy of the list
+print(new_fruits)
+
+num = [1,2,3,4,5] #append the number
+num.append(6)
+print(num)
+
+colours = ["red","blue"] #add and item in a list
+colours.insert(1,"orange")
+print(colours)
+
+colours = ["red","blue"]
+rainbow = ["yellow","brown"]
+colours.extend(rainbow)  #add the list
+
+name = ["safia","sadaf"]
+name1 = ["Amir","ali"]
+print(name + name1)
