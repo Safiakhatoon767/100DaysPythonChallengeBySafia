@@ -1,0 +1,362 @@
+What Are Tuples?
+
+Tuples are ordered collections of data, similar to lists.
+
+Use round brackets () to create tuples.
+
+Tuples are immutable (cannot be changed after creation).
+
+Simplified Examples:
+
+Example 1: Tuple with Numbers
+
+# Tuple containing numbers
+numbers = (10, 20, 30, 40)
+print(numbers)  # Output: (10, 20, 30, 40)
+
+Example 2: Tuple with Different Data Types
+
+# Tuple containing mixed data types
+person = ("Aisha", 25, "Engineer", 85.5)
+print(person)  # Output: ('Aisha', 25, 'Engineer', 85.5)
+
+Example 3: Tuple with Strings
+
+# Tuple containing strings
+colors = ("Red", "Green", "Blue")
+print(colors)  # Output: ('Red', 'Green', 'Blue')
+
+Key Points:
+
+Immutable: Once created, you cannot change the tuple.
+
+numbers = (10, 20, 30)
+numbers[0] = 15  # This will give an error
+
+Ordered: The items remain in the same sequence.
+
+Allows Duplicates: You can have duplicate values in a tuple.
+
+items = (1, 2, 2, 3)
+print(items)  # Output: (1, 2, 2, 3)
+
+Summary of Tuples
+
+Feature
+
+Description
+
+Example
+
+Definition
+
+Ordered, immutable collection
+
+(1, 2, 3)
+
+Syntax
+
+Use round brackets ()
+
+tuple_name = (item1, item2)
+
+Immutable
+
+Cannot modify after creation
+
+# No changing elements
+
+Duplicates
+
+Allows duplicate items
+
+(1, 1, 2)
+
+Mixed Data
+
+Can store different data types
+
+("Aisha", 25, 8.9)
+
+Practice:
+
+# Tuple containing numbers
+numbers = (10, 20, 30, 40)
+print(numbers)
+# Tuple containing mixed data types
+person = ("Aisha", 25, "Engineer", 85.5)
+print(person)
+# Tuple containing strings
+colors = ("Red", "Green", "Blue")
+print(colors)
+items = (1, 2, 2, 3)
+print(items)
+numbers = (10, 20, 30)
+numbers[0] = 15  # This will give an error
+
+What is Tuple Indexing?
+
+Each item in a tuple has an index to access it.
+
+Indexing can be done using positive or negative numbers.
+
+Positive indexing starts from 0 (first element), 1 (second element), and so on.
+
+Negative indexing starts from -1 (last element), -2 (second last), and so on.
+
+Examples of Tuple Indexing:
+
+1. Accessing Tuple Items with Positive Indexing
+
+# Tuple with countries
+countries = ("USA", "Canada", "India")
+
+# Accessing by positive index
+print(countries[0])  # Output: USA
+print(countries[1])  # Output: Canada
+print(countries[2])  # Output: India
+
+2. Accessing Tuple Items with Negative Indexing
+
+# Tuple with countries
+countries = ("USA", "Canada", "India", "Germany", "Australia")
+
+# Accessing by negative index
+print(countries[-1])  # Output: Australia (last element)
+print(countries[-3])  # Output: India (3rd last element)
+print(countries[-4])  # Output: Germany (4th last element)
+
+3. Check if an Item Exists in a Tuple
+
+You can check if an item is in a tuple using the in keyword.
+
+countries = ("USA", "Canada", "India", "Germany", "Australia")
+
+# Check for an item
+if "Germany" in countries:
+    print("Germany is in the tuple.")  # Output: Germany is in the tuple.
+else:
+    print("Germany is not in the tuple.")
+
+4. Accessing a Range of Items
+
+You can get a subset of items by specifying a start index and an end index.
+
+# Tuple with animals
+animals = ("cat", "dog", "bat", "mouse", "pig", "horse")
+
+# Accessing range of items
+print(animals[1:4])  # Output: ('dog', 'bat', 'mouse')
+print(animals[-5:-2])  # Output: ('dog', 'bat', 'mouse')
+
+5. Accessing Items from Start to End or Vice Versa
+
+Start to end: You can leave the start or end index empty to access all items from one end to the other.
+
+# Tuple with animals
+animals = ("cat", "dog", "bat", "mouse", "pig", "horse")
+
+# Access from start to a specific index
+print(animals[:4])  # Output: ('cat', 'dog', 'bat', 'mouse')
+
+# Access from a specific index to the end
+print(animals[2:])  # Output: ('bat', 'mouse', 'pig', 'horse')
+
+6. Accessing Items with a Step (Jump Index)
+
+You can also access every nth item in the tuple using a step/jump index.
+
+# Tuple with animals
+animals = ("cat", "dog", "bat", "mouse", "pig", "horse", "donkey", "goat", "cow")
+
+# Accessing every 2nd item
+print(animals[::2])  # Output: ('cat', 'bat', 'pig', 'donkey', 'cow')
+
+# Accessing every 3rd item within a range
+print(animals[1:8:3])  # Output: ('dog', 'pig', 'goat')
+
+Summary of Tuple Indexing:
+
+Type
+
+Description
+
+Example
+
+Positive Indexing
+
+Start from 0,1,2,3,... to access elements.
+
+tuple[0], tuple[1]
+
+Negative Indexing
+
+Start from -1,-2,-3,... to access elements from the end.
+
+tuple[-1], tuple[-2]
+
+Check for Item
+
+Use in keyword to check if item is present.
+
+"item" in tuple
+
+Range of Index
+
+Use start:end to access a range of elements.
+
+tuple[2:5]
+
+Step/Jump Index
+
+Use start:end:step to get elements with step.
+
+tuple[::2], tuple[1:8:3]
+
+Practice:
+
+Manipulating Tuples in Python
+
+Tuples are Immutable
+
+Tuples cannot be changed directly (i.e., immutable).
+
+To add, remove, or change items in a tuple, convert it to a list, make changes, and then convert it back to a tuple.
+
+Examples of Manipulating Tuples:
+
+1. Converting Tuple to List, Manipulating, and Converting Back
+
+# Original Tuple
+countries = ("Spain", "Italy", "India", "England", "Germany")
+
+# Convert tuple to list
+temp = list(countries)
+
+# Add item
+temp.append("Russia")
+
+# Remove item
+temp.pop(3)  # Removes item at index 3
+
+# Change item
+temp[2] = "Finland"
+
+# Convert list back to tuple
+countries = tuple(temp)
+
+print(countries)  # Output: ('Spain', 'Italy', 'Finland', 'Germany', 'Russia')
+
+2. Concatenating Two Tuples (No Conversion Needed)
+
+You can directly combine two tuples without converting them to a list.
+
+# Two tuples
+countries1 = ("Pakistan", "Afghanistan", "Bangladesh", "Sri Lanka")
+countries2 = ("Vietnam", "India", "China")
+
+# Concatenate tuples
+southEastAsia = countries1 + countries2
+
+print(southEastAsia)  
+# Output: ('Pakistan', 'Afghanistan', 'Bangladesh', 'Sri Lanka', 'Vietnam', 'India', 'China')
+
+Tuple Methods:
+
+1. count() Method
+
+The count() method tells you how many times a specific element appears in the tuple.
+
+Syntax:
+
+tuple.count(element)
+
+Example:
+
+tuple1 = (0, 1, 2, 3, 2, 3, 1, 3, 2)
+result = tuple1.count(3)
+print('Count of 3 in tuple1 is:', result)  # Output: 3
+
+2. index() Method
+
+The index() method returns the first occurrence of an element in the tuple. If the element is not found, it raises a ValueError.
+
+Syntax:
+
+tuple.index(element, start, end)
+
+Example:
+
+tuple2 = (0, 1, 2, 3, 2, 3, 1, 3, 2)
+result = tuple2.index(3)
+print('First occurrence of 3 is at index:', result)  # Output: 3
+
+3. Getting Length of a Tuple
+
+The len() method returns the number of elements in a tuple.
+
+Example:
+
+tuple1 = (0, 1, 2, 3, 2, 31, 1, 3, 2, 3)
+result = len(tuple1)
+print('Length of tuple1 is:', result)  # Output: 10
+
+Summary of Tuple Manipulation Methods:
+
+Method
+
+Description
+
+Example
+
+count()
+
+Counts the occurrences of an element.
+
+tuple.count(3)
+
+index()
+
+Returns the index of the first occurrence of an element.
+
+tuple.index(3)
+
+len()
+
+Returns the length (number of elements) of the tuple.
+
+len(tuple)
+
+Concatenation
+
+Combines two tuples.
+
+tuple1 + tuple2
+
+Tuple to List
+
+Convert tuple to list for manipulation.
+
+list(tuple) + operations + tuple(list)
+
+Practice:
+
+# Original Tuple
+countries = ("Spain", "Italy", "India", "England", "Germany")
+
+# Convert tuple to list
+temp = list(countries)
+
+# Add item
+temp.append("Russia")
+
+# Remove item
+temp.pop(3)  # Removes item at index 3
+
+# Change item
+temp[2] = "Finland"
+
+# Convert list back to tuple
+countries = tuple(temp)
+
+print(countries)
