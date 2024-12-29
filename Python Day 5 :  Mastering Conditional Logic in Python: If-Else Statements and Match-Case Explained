@@ -1,0 +1,177 @@
+If-Else Conditional Statements in Python
+
+The if-else statement is used to perform actions based on conditions.
+
+Syntax:
+
+if condition:
+    # Code to execute if the condition is True
+else:
+    # Code to execute if the condition is False
+
+Examples:
+
+Basic If-Else Example:
+
+age = 18
+if age >= 18:
+    print("You are eligible to vote.")
+else:
+    print("You are not eligible to vote.")
+
+Using Multiple Conditions (If-Elif-Else):
+
+marks = 85
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 75:
+    print("Grade: B")
+else:
+    print("Grade: C")
+
+Nested If-Else:
+
+marks = 85
+
+if marks >= 90:
+    print("Grade: A")
+elif marks >= 75:
+    if marks >= 80:
+        print("Grade: B+")
+    else:
+        print("Grade: B")
+elif marks >= 50:
+    if marks >= 60:
+        print("Grade: C+")
+    else:
+        print("Grade: C")
+else:
+    print("Grade: F")
+
+Key Points:
+
+Indentation is mandatory for defining blocks of code.
+
+Use elif for multiple conditions.
+
+else is optional and runs only if all conditions are False.
+
+Practice:
+
+if -else :
+
+if - elif - else :
+
+Nested if -else:
+
+Make a Python program that uses the if-elif-else loop to wish the user based on the current time:
+
+import datetime
+ghanta = datetime.datetime.now().hour
+
+if(5 <= ghanta < 12):
+  print("Good Morning Safia")
+
+elif(12 <= ghanta < 17):
+ print("Good Afternoon Safia")
+
+elif(17 <= ghanta < 21):
+  print("Good Evening Safia")
+
+else:
+  print("SO jA Safia Good Night")
+
+match-case Statement in Python :
+
+The match-case statement is a feature introduced in Python 3.10. It works like a switch-case in other programming languages. It allows us to match values against specific patterns and execute code based on the match.
+
+match variable:
+    case pattern1:
+        # Code for pattern1
+    case pattern2:
+        # Code for pattern2
+    case _:
+        # Default case (like else)
+
+safia = input("Enter the Operation(Add,Sub,Mul,Div): ")
+
+match safia:
+ case "add":
+  print("Add two numbers: ", 5 + 2)
+ case "sub":
+  print("Sub two numbers: ", 5 - 3)
+ case "mul":
+   print("Mul two numbers: ", 5 * 3)
+ case "div":
+   print("Div two numbers: ", 5/3 )
+ case "_":
+   print("Invalid Operations")
+
+Step-by-Step Explanation
+
+safia : Takes user input for the operation (e.g., add, sub, etc.).
+
+match safia: Matches the value of the safia variable.
+
+case Statements:
+
+case "add": Executes if the input is "add".
+
+case _: Acts as the default case if no other match is found.
+
+The program performs calculations and prints the result.
+
+Another Example: Weekday Matcher
+
+day = int(input("Enter a number (1-7): "))
+
+match day:
+    case 1:
+        print("Monday")
+    case 2:
+        print("Tuesday")
+    case 3:
+        print("Wednesday")
+    case 4:
+        print("Thursday")
+    case 5:
+        print("Friday")
+    case 6:
+        print("Saturday")
+    case 7:
+        print("Sunday")
+    case _:
+        print("Invalid day number!")
+
+Why Use match-case?
+
+Cleaner and more readable than multiple if-elif-else blocks.
+
+Great for matching exact values or patterns.
+
+Introduced in Python 3.10 for better pattern matching.
+
+we can write the same logic using if-elif-else instead of match-case :
+
+Example: Weekday Matcher Using if-elif-else
+
+day = int(input("Enter a number (1-7): "))  # Take input for day number
+
+# Match the day using if-elif-else
+if day == 1:
+    print("Monday")
+elif day == 2:
+    print("Tuesday")
+elif day == 3:
+    print("Wednesday")
+elif day == 4:
+    print("Thursday")
+elif day == 5:
+    print("Friday")
+elif day == 6:
+    print("Saturday")
+elif day == 7:
+    print("Sunday")
+else:
+    print("Invalid day number!")  # Default case for invalid input
+
